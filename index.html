@@ -1,205 +1,486 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-adsense-account" content="ca-pub-7325944573928464">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325944573928464" crossorigin="anonymous"></script>
     <title>Money Plant Link Pvt. Ltd. FLM Call & Traveling Bill Management System</title>
     <style>
         /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab); /* Dark elegant gradient */
+    color: #e0e0e0; /* Light gray for a subtle text contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    margin-top: 20px;
+}
+
+header img {
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+    animation: bounce 1.5s infinite; /* Bounce animation for logo */
+}
+
+/* Heading Styles */
+h1 {
+    color: #f1c40f; /* Bright yellow for the heading */
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styles */
+form {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for a modern look */
+    border-radius: 15px;
+    padding: 2em;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+form:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #1abc9c; /* Soft teal for labels */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Input, Select, and Textarea Styles */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Light gray border */
+    margin-bottom: 15px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pulse Animation for Empty Fields */
+input:placeholder-shown,
+textarea:placeholder-shown,
+select:placeholder-shown {
+    animation: pulse 1.5s infinite; /* Continuous pulse animation for empty fields */
+    border-color: #e74c3c; /* Red border to indicate empty fields */
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Input Focus Styles */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #1abc9c; /* Teal border on focus */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Teal glow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    background-color: #1abc9c; /* Teal button color */
+    color: #ffffff; /* White text */
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for button */
+}
+
+button:hover {
+    background-color: #16a085; /* Darker teal on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        padding: 1.5em;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 1.2em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+/* Bounce Animation for Image */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+        button {
+    background-color: #6f42c1; /* Purple color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding */
+    font-size: 1.2em; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+/* Hover effect */
+button:hover {
+    transform: rotate(10deg); /* Rotate on hover */
+}
+
+/* Active effect */
+button:active {
+    transform: rotate(-10deg); /* Rotate in opposite direction on click */
+}
+button {
+    background-color: #6f42c1; /* Purple color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding */
+    font-size: 1.2em; /* Font size */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.5s; /* Smooth transition */
+}
+
+/* Hover effect */
+button:hover {
+    transform: rotate(10deg); /* Rotate on hover */
+}
+
+/* Active effect */
+button:active {
+    transform: rotate(-10deg); /* Rotate in opposite direction on click */
+}
+
+        footer {
+            background: #333;
+            padding: 8px;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        #thankYouPopup {
+    z-index: 1000;
+    animation: popupFadeIn 0.5s ease-in-out;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3); /* সুন্দর গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+    border: 3px solid #ffffff; /* সাদা বর্ডার */
+    color: white;
+}
+
+#thankYouPopup h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* পাঠ্যের জন্য শ্যাডো */
+}
+
+#thankYouPopup p {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+        /* নতুন বাটনের জন্য স্টাইল */
+        .office-use-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .office-use-btn:hover {
+            background-color: #218838;
+        }
+        .office-use-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .office-use-modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+        }
+        .office-use-modal-content button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .office-use-modal-content button:hover {
+            background-color: #0056b3;
+        }
+/* Global Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #1f1c2c, #928dab);
             color: #e0e0e0;
-            text-align: center;
             padding: 20px;
-            position: relative;
-            min-height: 100vh;
-            z-index: 1;
+            position: relative; /* Positioning for absolute elements */
+            min-height: 100vh; /* Ensuring full height */
+            z-index: 1; /* Set a base z-index for the body */
         }
 
-        /* Header Styles */
-        header {
-            margin-top: 20px;
+        /* Marquee Section */
+        .marquee-container {
+            position: fixed; /* Position at the bottom */
+            bottom: 0; /* Align to the bottom */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the marquee */
+            padding: 10px 0; /* Padding only vertically */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden; /* Hide overflow */
+            white-space: nowrap; /* Prevent wrapping */
+            z-index: 1000; /* High z-index to ensure it stays above other elements */
         }
 
-        header img {
-            width: 350px;
-            height: auto;
-            margin-bottom: 10px;
-            animation: bounce 1.5s infinite;
+        .marquee {
+            display: inline-block; /* Allow inline movement */
+            animation: scroll 35s linear infinite; /* Animation for scrolling */
+            color: #ff6347; /* Tomato color for the text */
+            font-size: 1.5em; /* Size of the marquee text */
+            padding-left: 100%; /* Start from the right edge */
         }
 
-        /* Heading Styles */
-        h1 {
-            color: #f1c40f;
-            margin-top: 20px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        /* Keyframes for the scrolling effect */
+        @keyframes scroll {
+            from {
+                transform: translateX(0); /* Start from right edge */
+            }
+            to {
+                transform: translateX(-100%); /* Move to left */
+            }
         }
+        #thankYouPopup {
+    z-index: 1000;
+    animation: popupFadeIn 0.10s ease-in-out;
+}
 
-        /* Form Styles */
-        form {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 2em;
-            margin: 20px auto;
-            max-width: 600px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
 
-        form:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
 
-        /* Label Styles */
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            color: #1abc9c;
-            font-size: 18px;
-            font-weight: bold;
-        }
+footer {
+    background-color: #1a1a1a; /* ডার্ক ব্যাকগ্রাউন্ড */
+    color: #e0e0e0; /* লাইট গ্রে টেক্সট */
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.5);
+}
 
-        /* Input, Select, and Textarea Styles */
-        input[type="text"],
-        input[type="date"],
-        input[type="time"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-            font-size: 16px;
-            box-sizing: border-box;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
+footer p {
+    margin: 0;
+    line-height: 1.6;
+}
 
-        input:placeholder-shown,
-        textarea:placeholder-shown,
-        select:placeholder-shown {
-            animation: pulse 1.5s infinite;
-            border-color: #e74c3c;
-        }
+footer a {
+    color: #76c7c0; /* টিল কালার লিংক */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+footer a:hover {
+    color: #ffd700; /* হোভার এ লিংক কালার গোল্ড */
+}
 
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #1abc9c;
-            box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
-            outline: none;
-        }
+footer .social-icons {
+    display: flex;
+    gap: 20px;
+}
 
-        /* Button Styles */
-        button {
-            background-color: #6f42c1;
-            color: white;
-            padding: 12px 20px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.5s;
-        }
+footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        button:hover {
-            transform: rotate(10deg);
-        }
+footer .social-icons a:hover {
+    background-color: #76c7c0; /* সোশ্যাল আইকনে টিল হোভার কালার */
+    transform: scale(1.1); /* সামান্য বড় দেখানোর জন্য */
+}
 
-        button:active {
-            transform: rotate(-10deg);
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #e0e0e0;
-            padding: 30px 0;
-            width: 100%;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Responsive Media Queries */
-        @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            form { padding: 1.5em; }
-            label { font-size: 16px; }
-            input, textarea, select { font-size: 14px; }
-            button { font-size: 16px; padding: 10px 16px; }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 1.5em; }
-            form { padding: 1.2em; }
-            button { font-size: 14px; padding: 8px 14px; }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Additional styles remain here... */
     </style>
 </head>
 <body>
     <!-- Marquee Section -->
     <div class="marquee-container">
         <div class="marquee">
-            সকল কাস্টোডিয়ান এর দৃষ্টি আকর্ষণ করছি, সব ক্যাসেট ভালো করে চেক দিতে হবে...
+            সকল কাস্টোডিয়ান এর দৃষ্টি আকর্ষণ করছি,  **আগামী ২৯ জানুয়ারী  ডাচ বাংলা ব্যাংক এর অডিট হবে। এইদিন আমাদের সকল সিআরএম এবং এটিএম অফলোড করে লোড দিতে হবে।  সেদিন আমাদের সকল সিআরএম এবং এটিএম মেশিনের বিফোর এবং আফটার  প্রিন্ট ২সেট করে নিতে হবে। সব ক্যাসেট ভালো করে চেক দিতে হবে, কোন অবস্থায় সেদিন টাকা ফেলে আসা যাবেনা। সিআরএম এবং এটিএম মেশিনে এবং সুইচে ইনপুট সঠিক ভাবে দিতে হবে।  ইনপুট কনফার্ম করে এফটি থেকে বের হতে হবে। ধন্যবাদ।
         </div>
     </div>
 
+</head>
+<body>
+    <h1>FLM Call & Traveling Bill Management System</h1>
+<title>Animation Test</title>
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .bounce {
+            animation: bounce 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
     <header>
         <img src="https://i.imgur.com/wdj5VIH.png" alt="Money Plant Logo" class="bounce">
-    </header>
-    <h1>Money Plant Link Pvt. Ltd.<br>FLM Call & Traveling Bill Management System</h1>
-
-    <form id="myForm" method="post" action="YOUR_GOOGLE_SCRIPT_URL" onsubmit="handleSubmit(event)">
-        <!-- Form fields remain unchanged... -->
-    </form>
-
-    <!-- Footer and scripts remain unchanged... -->
-
-    <h1> 
-        FLM Call & Traveling Bill Management System</h1>
-    <meta name="google-adsense-account" content="ca-pub-7325944573928464">
-    <form id="myForm" method="post" action="https://script.google.com/macros/s/AKfycby8G8qwhM3s0D4Ws0eTs1AHpSgDWVYy3BG5W5mB_aVC2UiU1ZJGhkp0AigssIDUBlpc-w/exec" onsubmit="handleSubmit(event)">
+    <form id="dataEntryForm">
         <label for="Date">Date:</label>
-        <input type="date" id="Date" name="Date" required>                            
+        <input type="text" id="Date" name="Date" readonly>
 
         <label for="EmployeeID">Employee ID:</label>
-        <input type="text" id="JobID" name="JobID" placeholder="Enter Employee ID" required oninput="updateExecutiveNameAndZone()">
-        <div id="EmployeeIDError" class="error-message"></div>
+        <input type="text" id="EmployeeID" name="EmployeeID" placeholder="Employee ID" required>
 
         <label for="ExecutiveName">Executive Name:</label>
-        <input type="text" id="ExecutiveName" name="ExecutiveName" placeholder="Auto-filled based on Employee ID" required readonly>
+        <input type="text" id="ExecutiveName" name="ExecutiveName" readonly>
+
+        <label for="MobileNumber">Mobile Number:</label>
+        <input type="text" id="MobileNumber" name="MobileNumber" readonly>
 
         <label for="Zone">Zone:</label>
-        <input type="text" id="Zone" name="Zone" placeholder="Auto-filled based on Employee ID" required readonly>
+        <input type="text" id="Zone" name="Zone" readonly>
 
         <label for="ATMCRMID">ATM/CRM ID:</label>
-        <input type="text" id="ATMCRMID" name="ATMCRMID" placeholder="Enter ATM or CRM ID" required oninput="updateATMLocation()">
-        <div id="ATMCRMIDError" class="error-message"></div>
+        <input type="text" id="ATMCRMID" name="ATMCRMID" required>
 
         <label for="ATMLOCATION">ATM Location:</label>
-        <input type="text" id="ATMLOCATION" name="ATMLOCATION" placeholder="Auto-filled based on ATM or CRM ID" required>
+        <input type="text" id="ATMLOCATION" name="ATMLOCATION" readonly>
 
-        <label for="TypeOfCall">Type Of Call:</label>
+        <label for="TypeOfCall">Type of Call:</label>
         <select id="TypeOfCall" name="TypeOfCall" required>
             <option value="">Select an option</option>
             <option value="Cash Jam">Cash Jam</option>
@@ -215,25 +496,25 @@
             <option value="Other’s">Other’s</option>
         </select>
 
-        <label for="InTime">ATM/CRM Open Time:</label>
-        <input type="time" id="InTime" name="InTime" required>
+        <label for="ATMOpenTime">ATM/CRM Open Time:</label>
+        <input type="text" id="ATMOpenTime" name="ATMOpenTime" placeholder="HH:MM" required>
 
-        <label for="OutTime">ATM/CRM Close Time:</label>
-        <input type="time" id="OutTime" name="OutTime" required>
+        <label for="ATMCloseTime">ATM/CRM Close Time:</label>
+        <input type="text" id="ATMCloseTime" name="ATMCloseTime" placeholder="HH:MM" required>
 
         <label for="From">From:</label>
-        <input type="text" id="From" name="From" placeholder="Enter your bill start location" required>
+        <input type="text" id="From" name="From" placeholder="Starting Location" required>
 
         <label for="To">To:</label>
-        <input type="text" id="To" name="To" placeholder="Enter your bill End location" required>
+        <input type="text" id="To" name="To" placeholder="Destination" required>
 
         <label for="Transport">Transport:</label>
-        <input type="text" id="Transport" name="Transport" placeholder="Enter What transport are you using?" required>
+        <input type="text" id="Transport" name="Transport" placeholder="Transport Mode" required>
 
         <label for="TravellingAmount">Travelling Amount:</label>
-        <input type="text" id="TravellingAmount" name="TravellingAmount" placeholder="Enter Travelling Amount" required>
+        <input type="text" id="TravellingAmount" name="TravellingAmount" placeholder="Amount" required>
 
-        <label for="Person">How many people's bills?:</label>
+        <label for="PeopleCount">How many people's bills?:</label>
         <select id="Person" name="Person" required>
             <option value="">Select an option</option>
             <option value="1 Person">1 Person</option>
@@ -241,316 +522,42 @@
         </select>
 
         <label for="Remarks">Remarks:</label>
-        <textarea id="Remarks" name="Remarks" placeholder="Enter any remarks here" required></textarea>
+        <textarea id="Remarks" name="Remarks" placeholder="Enter any remarks"></textarea>
 
         <button type="submit">Submit</button>
-        <div id="formError" class="error-message"></div>
-        <div id="formSuccess" class="success-message"></div>
     </form>
 
-    <div id="thankYouMessage">Thank you for your valuable time</div>
-
-    <div class="button-container">
-       <!-- Button to open the modal -->
-<button onclick="showCallModal()">Show Your Call</button>
-
-<!-- Modal for Show Your Call options -->
-<div id="callModal" class="modal">
-    <div class="modal-content">
-        <p>Select your zone:</p>
-        <button onclick="openCall('Dhaka-1')">Dhaka-1</button>
-        <button onclick="openCall('Dhaka-2')">Dhaka-2</button>
-        <button onclick="closeCallModal()">Close</button>
-    </div>
-</div>
-
-<script>
-// Function to show the "Show Your Call" modal
-function showCallModal() {
-    document.getElementById('callModal').style.display = 'block';
-}
-
-// Function to open the call spreadsheet link based on zone selection
-function openCall(zone) {
-    if (zone === 'Dhaka-1') {
-        window.open('https://docs.google.com/spreadsheets/d/e/2PACX-1vQQ1xUgju54dAdR02J9h7FnHVI-oyyBtW1ciuySBde4bAu20xV2i-yv-EjoXtvc8JanDlDpa9sL2xHG/pubhtml?gid=0&single=true', '_blank');
-    } else if (zone === 'Dhaka-2') {
-        window.open('https://docs.google.com/spreadsheets/d/e/2PACX-1vSgJVLzmOnZw9NThCEw4XA-clymV_NLRlKOPNNCTsiJeZjW5AG4FPS4NKpg5yVmxqUjxVcWuHnba6il/pubhtml?gid=0&single=true', '_blank');
-    }
-    closeCallModal();
-}
-
-// Function to close the modal
-function closeCallModal() {
-    document.getElementById('callModal').style.display = 'none';
-}
-</script>
-
-        <button onclick="window.open('https://docs.google.com/spreadsheets/d/1Zl8JI8J4TPR3ZOFy3kz-aYIpOOBuQBY8n1hBZ1apm4Y/edit?gid=1995041031#gid=1995041031', '_blank')">Ta Bill Show</button>
-        <button onclick="showShortageOptions()">Show Your Shortage</button>
-    </div>
-
-    <!-- Modal for Shortage options -->
-    <div id="shortageModal" class="modal">
-        <div class="modal-content">
-            <p>Select your zone:</p>
-            <button onclick="promptPassword('Dhaka-1')">Dhaka-1</button>
-            <button onclick="promptPassword('Dhaka-2')">Dhaka-2</button>
-            <button onclick="closeModal()">Close</button>
-        </div>
-    </div>
-     <!-- নতুন Office Use বাটন -->
-    <div class="button-container">
-        <button class="office-use-btn" onclick="showOfficeUseModal()">Office Use</button>
-    </div>
-
-    <!-- Modal for Office Use options -->
-    <div id="officeUseModal" class="office-use-modal">
-        <div class="office-use-modal-content">
-            <p>Select an option:</p>
-            <button onclick="window.open('https://docs.google.com/spreadsheets/d/1_uL-3fAO3dnYRKmmmIgDRuD3-1MSrD7u79YOQBAVh7E/edit?usp=sharing', '_blank')">Dhaka-1 Call Entry</button>
-            <button onclick="window.open('https://docs.google.com/spreadsheets/d/10qaUSslUNAMHjVmjfsF2NCYRC0ZCG61DI3j95dnz4xY/edit?usp=sharing', '_blank')">Dhaka-2 Call Entry</button>
-            <button onclick="window.open('https://docs.google.com/spreadsheets/d/1iaLddIrCsyUvFrW_-JnXOsMriXIAqANNLfhWNVGGkiM/edit?gid=0#gid=0', '_blank')">TA Bill Check</button>
-            <button onclick="closeOfficeUseModal()">Close</button>
-        </div>
-    </div>
-
-    <script>
-        // Office Use মডাল দেখানোর ফাংশন
-        function showOfficeUseModal() {
-            const password = prompt("Please enter the password:");
-            if (password === 'mpll321') {
-                document.getElementById('officeUseModal').style.display = 'block';
-            } else {
-                alert("Incorrect password.");
-            }
-        }
-
-        // Office Use মডাল বন্ধ করার ফাংশন
-        function closeOfficeUseModal() {
-            document.getElementById('officeUseModal').style.display = 'none';
-        }
-    </script>
-</body>
-</html>
-
     <footer>
-        <p>- Powered by Rahimul Islam. If you need any information please contact 01976755754,
-        Money Plant Link Pvt. Ltd. © 2025</p>
+        <p>Powered by Rahimul Islam @ Money Plant Link Pvt. Ltd. &copy; 2025</p>
     </footer>
 
-    <!-- জাভাস্ক্রিপ্ট কোড এখানে রাখুন -->
     <script>
-        // Map of Job IDs to Executive Names
-        const jobIdToName = {
-            144: 'Md.Rubel',
-            1024: 'Md. Rokon Uddin',
-            1046: 'Md. Rahimul Islam', 
-            1007: 'Md. Syedur Rahman', 
-            1017: 'Abdullah-Al-Mamun',
-            1270: 'Palash Roy', 
-            1021: 'Md. Rocky Mia', 
-            1025: 'Md. Miraj Hossain', 
-            1026: 'Md. Kamruzzaman', 
-            1165: 'Khalid Hossain Shaikh', 
-            1152: 'Md. Ariful Islam', 
-            1448: 'Md. Alamgir Kabir', 
-            1587: 'Abdul Quddus (Jewel)', 
-            1789: 'Md. Jahangir Alam', 
-            1945: 'Md. Mofijul Islam', 
-            1243: 'Md. Al Amin', 
-            1659: 'Md. Shajahan Ali', 
-            11127: 'Md. Zakir Hossin', 
-            11285: 'Md. Emrul Islam', 
-            11358: 'Md. Masruful Islam', 
-            11279: 'Abu Shahin', 
-            11656: 'Md. Arif Hossain-3', 
-            11733: 'Md. Zasim Uddin', 
-            11594: 'Bikash Roy', 
-            11660: 'Md. Anowarul Islam', 
-            11747: 'Md. Rakib Ali', 
-            11707: 'SK Ramez Ahmed Rana', 
-            11731: 'Md. Arif Hossain-4', 
-            11999: 'Hasan Mia', 
-            11810: 'Md. Kaysar Ahmed', 
-            11815: 'Md. Rabbiul Hasan', 
-            12113: 'Md. Miraj Mia-2', 
-            12059: 'Md. Nazmul Hassan', 
-            12065: 'Shayama Pada Sana', 
-            11968: 'Mehedi Hasan Sagor', 
-            12071: 'Abdus Salam', 
-            12060: 'Atiqur Rahman', 
-            12038: 'Md. Sofiqul Islam Bashar', 
-            1596: 'Plock Kumer Raha', 
-            12057: 'Md. Solaiman Khan', 
-            11374: 'MD. RAKIB UDDIN', 
-            11245: 'YASIR ARAFAT', 
-            1950: 'Meraz Mahmud', 
-            11336: 'Md. Asaduzzaman Roni', 
-            11843: 'Mynul Islam', 
-            1465: 'MD. EMRAN', 
-            11719: 'SHUVANKAR BAIRAGI', 
-            11790: 'AKTARUL BIN HASAN', 
-            11751: 'MD. AL AMIN SARDAR', 
-            11364: 'MD. ABU RAYHAN', 
-            11655: 'Anwar Hossain', 
-            12089: 'Subroto Kuri', 
-            11247: 'Md.Jahangir Fokir', 
-            12181: 'Md. Rahedul Islam', 
-            12183: 'Md. Tanvir Hasan', 
-            12182: 'Mirajul Islam', 
-            11888: 'MD. AMIR HOSSAIN', 
-            12220: 'Kawser Ahmed Fahim',  
-            2024012232: 'Mehedi Hasan', 
-            2024012223: 'Abdul Barik', 
-            2024012225: 'Abdur Rahman', 
-            2024012231: 'Abdullah Al Sakib', 
-            2024012266: 'Md. Rasel', 
-            202408012315: 'Sawpan Das', 
-            1018: 'Sukanta Bepari', 
-            1033: 'Raju Ahmed-1', 
-            1283: 'Md. Piearul Islam', 
-            1890: 'Md. Serajul Islam', 
-            1976: 'Md. Raju Biswas',  
-            1240: 'Md. Sazal', 
-            11271: 'Md. Mahmudul Hasan', 
-            11272: 'Md. Atikur Rahman', 
-            11274: 'Md. Ariful Islam-2', 
-            11282: 'Md. Saddam Hossain', 
-            11283: 'Md. Shahinur Islam', 
-            11475: 'Md. Sohanur Rahman', 
-            11485: 'Md. Rajuan Islam', 
-            11489: 'Md. Sohan Ali', 
-            2412012402: 'Tapas Kumar Samadder', 
-            11625: 'Md. Ratul', 
-            2412012403: 'Md. Harun Or Rashid', 
-            11927: 'Mojibur Rahman', 
-            12117: 'Md. Nurnobi Hossen', 
-            11958: 'Shafiqul Islam', 
-            11276: 'Binoy Halder', 
-            12009: 'Md. Samsur Rahman', 
-            12010: 'Md. Nayon Babu', 
-            12142: 'Md. Asadullah Al Masud', 
-            12145: 'Md. Azizul Hakim', 
-            12146: 'Md. Rafi Hossain Shipon', 
-            11783: 'Omor Sharif Khalifa', 
-            1043: 'Nasir Uddin',
-            12066: 'Md.Mohibullah  ',
-            2410012334: 'Nishad Babu',
-            241001235: 'Abul Hasan Kamrul',
-            1469: 'Abdullah Al Monaem',
-            2409012373: 'Rakib Hossain',
-            11765: 'Md. Suzon'
-            // Add other Job IDs here
-        };
+    const employeeData = {
+    '1046': { name: 'Md. Rahimul Islam', zone: 'Head Office', mobile: '01958193410' },
+    '2024102236': { name: 'Hasan Habib', zone: 'CEPZ-1,CTG', mobile: '01958193613' },
+    '2024102235': { name: 'Monir Ahamed', zone: 'CEPZ-2,CTG', mobile: '01958193616' },
+    '2024102234': { name: 'Md.Maruf', zone: 'CEPZ-2,CTG', mobile: '01958193618' },
+    '2407102311': { name: 'Sonjoy Sharma', zone: 'CEPZ-2,CTG', mobile: '01958193619' },
+    '91869': { name: 'Ajoy Das', zone: 'CEPZ-2,CTG', mobile: '01958193548' },
+    '101420': { name: 'Abdul Jolil', zone: 'PAHARTALI,CTG', mobile: '01958193606' },
+    '2409102370': { name: 'Md.Shakibur Rahman', zone: 'PAHARTALI,CTG', mobile: '01958193611' },
+    '101697': { name: 'Md.Whahidur Rahman', zone: 'PAHARTALI,CTG', mobile: '01958193610' },
+    '101426': { name: 'Md.Arman', zone: 'HALISHAHAR,CTG', mobile: '01958193607' },
+    '2024102238': { name: 'Samir Nawaz', zone: 'HALISHAHAR,CTG', mobile: '01786222633' },
+    '102207': { name: 'Shariar Imon', zone: 'HALISHAHAR,CTG', mobile: '01958193608' },
+    '101421': { name: 'Md.Zahid Hossain (1)', zone: 'SCB,CTG', mobile: '01958193620' },
+    '91868': { name: 'Md.Elias', zone: 'CEPZ-1,CTG', mobile: '01958193612' },
+    '2407102379': { name: 'Md.Saiful Islam', zone: 'CEPZ-1,CTG', mobile: '01958193617' },
+    '2501102422': { name: 'Md.Sakib Bin Monir', zone: 'PAHARTALI,CTG', mobile: '01309752922' },
+    '2501102421': { name: 'Md.Imtiaz Ali', zone: 'HALISHAHAR,CTG', mobile: '01632617615' },
+    '2407102369': { name: 'Sajedul Huda', zone: 'CEPZ-1,CTG', mobile: '01958193615' },   
+    '2024102245': { name: 'Jahid Hasan Akib', zone: 'SCB,CTG', mobile: '01958193621' }
+        
+};
 
-        // Map of Job IDs to Zones
-        const jobIdToZone = {
-             1024: 'Head Office',
-             144: 'Head Office',
-             1046: 'Head Office', 
-             1007: 'Head Office', 
-             1017: 'Abdullah-Al-Mamun', 
-             1270: 'ADC', 
-             1021: 'DEPZ', 
-             1025: 'Konabari-2', 
-             1026: 'Others Bank', 
-             1165: 'Nabinagar', 
-             1152: 'Md. Ariful Islam', 
-             1448: 'Head Office', 
-             1587: 'Head Office', 
-             1789: 'Head Office', 
-             1945: 'Chandra-1', 
-             1243: 'Savar-1', 
-             1659: 'Others Bank', 
-             11127: 'Md. Zakir Hossin', 
-             11285: 'Savar-2', 
-             11358: 'ADC', 
-             11279: 'Ashulia-2', 
-             11656: 'Md. Arif Hossain-3', 
-             11733: 'Md. Zasim Uddin', 
-             11594: 'Savar-2', 
-             11660: 'Chandra-2', 
-             11747: 'DEPZ', 
-             11707: 'Ashulia-1', 
-             11731: 'Md. Arif Hossain-4', 
-             11999: 'Hasan Mia', 
-             11810: 'Konabari-1', 
-             11815: 'Konabari-2', 
-             12113: 'Md. Miraj Mia-2', 
-             12059: 'Md. Nazmul Hassan', 
-             12065: 'Chowrasta-2', 
-             11968: 'Manikgonj-2', 
-             12071: 'Chandra-1', 
-             12060: 'Nabinagar', 
-             12038: 'Konabari-1', 
-             1596: 'Plock Kumer Raha', 
-             12057: 'Others Bank', 
-             11374: 'MD. RAKIB UDDIN', 
-             11245: 'Others Bank', 
-             1950: 'Meraz Mahmud', 
-             11843: 'Head Office', 
-             1465: 'MD. EMRAN', 
-             11719: 'SCB',
-             12066: 'SCB',
-             11790: 'SCB', 
-             11751: 'Others Bank', 
-             11364: 'MD. ABU RAYHAN', 
-             11655: 'SCB', 
-             12089: 'SCB', 
-             11247: 'SCB', 
-             12181: 'Tongi', 
-             12183: 'Md. Tanvir Hasan', 
-             12182: 'Mirajul Islam', 
-             11888: 'Card Carrying ', 
-             12220: 'Kawser Ahmed Fahim', 
-             12208: 'Md. Nazmul Islam', 
-             2024012232: 'Manikgonj-1', 
-             2024012223: 'Savar-1', 
-             2024012225: 'Ashulia-2', 
-             2024012231: 'Abdullah Al Sakib', 
-             2024012266: 'Manikgonj-2', 
-             202408012315: 'Chandra-2', 
-             1018: 'Sukanta Bepari', 
-             1033: 'Head Office', 
-             1283: 'College Gate', 
-             1890: 'Manikgonj-1', 
-             1976: 'Mawna',  
-             1240: 'Uttara-2', 
-             11271: 'Kaligonj', 
-             11272: 'Tongi', 
-             11274: 'Bagher Bazar', 
-             11282: 'Mawna', 
-             11283: 'Chowrasta-1', 
-             11475: 'RPL', 
-             11485: 'Uttara-1',
-             1469: 'Uttara-1',
-             11487: 'Tongi', 
-             11489: 'Uttara-1', 
-             2412012402: 'Salna', 
-             241001235: 'Salna',
-             11625: 'College Gate', 
-             2412012403: 'Master Bari', 
-             11740: 'Salna', 
-             11927: 'Chowrasta-2', 
-             12117: 'Master Bari', 
-             11958: 'Uttara-3', 
-             11276: 'Chowrasta-1', 
-             12009: 'Kaligonj', 
-             12010: 'Uttara-3', 
-             12142: 'Uttara-3', 
-             12145: 'Uttara-2', 
-             12146: 'RPL', 
-             11783: 'CPC-2', 
-             1043: 'Chowrasta-2',
-            2410012334: 'College Gate', 
-             2409012373: 'Uttara-1'
-            // Add other Job IDs and their corresponding zones here
-        };
 
-        // Map of ATM/CRM IDs to ATM Locations
-        const atmIdToLocation = {
-'SCB3203': 'ICDDRB',
+    const atmData = {
+    'SCB3203': 'ICDDRB',
 '000': 'card carrying',
 'SCB3300': 'Dhanmondi 5',
 'SCB3303': 'Dhanmondi 5',
@@ -802,6 +809,7 @@ function closeCallModal() {
 '144': 'KANAIPUR FRD-4',
 '146': 'SARKER MKT FT-5 ASHULIA',
 '152': 'SATAISH RD SUB BR-1 GAZI',
+'160': 'SEC-14 UTR FT-2',
 '162': 'EIDGAH FT-1 COX',
 '167': 'GRAPHICS TEX FT1 DHAMRAI',
 '168': 'BARANGAIL FT-4 MAN',
@@ -895,6 +903,7 @@ function closeCallModal() {
 '786': 'MULTAZIM SPIN-2',
 '787': 'MARK SWEATER FT-1 GAZI',
 '855': 'HAZI UNUS ALI SRK FT2 SAV',
+'917': 'AMCGH FT-5 UTTR',
 '935': 'MANIKGANJ BUS STND FT-1',
 '941': 'AIRPT R FT8 CTG',
 '956': 'SHAFIPUR BZR FT-5 GAZI',
@@ -922,6 +931,7 @@ function closeCallModal() {
 '1099': 'NIKUNJA-2 FT-3',
 '1101': 'KALIGANJ BZ FT3 GAZ',
 '1102': 'TOYEBPUR FT-2 ZIRABO',
+'1122': 'EVER SMART3 GAZ',
 '1135': 'KATGOR FT-4 CTG',
 '1136': 'KATGOR FT-5 CTG',
 '1139': 'MAA-O-SHISU CTG',
@@ -929,6 +939,7 @@ function closeCallModal() {
 '1142': 'KALITOLA-1 BOG',
 '1155': 'HALUAGHAT MAIN RD FT-1',
 '1156': 'DAMUDDYA FT-2 SHA',
+'1157': 'AMCGH FT-6 UTTR',
 '1158': 'MOUCHAK FT-8 GZ',
 '1159': 'BEGUNBARI RD FT-3 AMINBZR',
 '1160': 'SAVAR CANTT FT7',
@@ -1032,6 +1043,7 @@ function closeCallModal() {
 '1664': 'TEAM GROUP FT-2 SAVAR',
 '1673': 'BILASHPUR FT-3 GAZIPUR',
 '1676': 'BUS STOP VALUKA FT-4',
+'1677': 'FULPUR FT-3 MYM',
 '1682': 'RAMU FT-2 COX',
 '1683': 'D T ROAD FT-2 CTG',
 '1684': 'BASHKHALI FT5 CTG',
@@ -1055,8 +1067,6 @@ function closeCallModal() {
 '1787': 'KURIL FT-1',
 '1788': 'NIKUNJA R13 FT5',
 '1802': 'AZIZ H CLG-1 BO',
-'1804': 'B GOLA FT-1 BOG',
-'1807': 'B GOLA FT-4 BOG',
 '1808': 'PAGAR SUB BR FT-1 GAZI',
 '1809': 'MALEKERBARI SUB BR-1 GAZ',
 '1810': 'FULBARIA SUB BR FT-1 DHK',
@@ -1235,6 +1245,7 @@ function closeCallModal() {
 '2494': 'COURT BZR FT-4 UKHIYA',
 '2507': 'ZIRABO BUS STND FT3 SAVAR',
 '2508': 'BUS STAND FT2 HEMAYETPUR',
+'2514': 'EVER SMART2 GAZ',
 '2518': 'RAJENDRAPUR FT2',
 '2520': 'RAJENDRAPUR FT4',
 '2522': 'SHAHID RAFIQ RD FT4 MAN',
@@ -1293,8 +1304,6 @@ function closeCallModal() {
 '2861': 'DUPCHANCHIA FT3 BOG',
 '2895': 'NARSINGPUR FT1 SAV',
 '2896': 'NARSINGPUR FT2 SAV',
-'2897': 'GMS TEXTILE FT-1 GAZI',
-'2898': 'GMS TEXTILE FT-2 GAZI',
 '2924': 'ZIRABO BUS STND FT6 SAVAR',
 '2925': 'BUS STAND FT3 HEMAYETPUR',
 '2935': 'HALISAHAR BL-B FT3',
@@ -1407,7 +1416,6 @@ function closeCallModal() {
 '3672': 'RAZZAK PLAZA FT7 ASHULIA',
 '3675': 'SALNA BZR SUB BR FT-1 GAZ',
 '3677': 'PC RD RAMPUR FT2 CTG',
-'3678': 'CEPZ FT-1 CTG',
 '3679': 'TIGER PASS-2 CTG',
 '3682': 'UTTARA BRANCH FT-1 DHK',
 '3684': 'T BZR SUB BR FT-1 GAZI',
@@ -1418,7 +1426,6 @@ function closeCallModal() {
 '3732': 'DC OFFICE FT-2 SHA',
 '3733': 'ZAJIRA FT-4 SHA',
 '3739': 'COATS BD-1 CTG',
-'3740': 'CEPZ FT-2 CTG',
 '3743': 'NEW MOORING FT-9 CEPZ',
 '3744': 'NEW MOORING FT-10 CEPZ',
 '3745': 'NEW MOORING FT-11 CEPZ',
@@ -1434,7 +1441,6 @@ function closeCallModal() {
 '3852': 'PAHARTALI FT-1 CTG',
 '3853': 'PAHARTALI FT-2 CTG',
 '3854': 'PAHARTALI FT-3 CTG',
-'3855': 'CEPZ FT-3 CTG',
 '3859': 'BUS STD FT-3 COXS',
 '3867': 'SAGORIKA FT-5, CTG',
 '3872': 'AKH KNITING FT3 SAVAR',
@@ -1464,9 +1470,7 @@ function closeCallModal() {
 '4101': 'KAMARKHANDA FT3 SIR',
 '4129': 'MONIPUR BZR FT-2 GAZI',
 '4132': 'TEAM GROUP FT-3 SAVAR',
-'4150': 'CEPZ FT-4 CTG',
 '4151': 'NEW MOORING FT-1 CEPZ',
-'4152': 'CEPZ FT-5 CTG',
 '4161': 'TANGAIL BS FT-3 MYM',
 '4175': 'MODHUKHALI FT-3 FRD',
 '4176': 'MODHUKHALI FT-4 FRD',
@@ -1605,6 +1609,7 @@ function closeCallModal() {
 '4934': 'DREAM HOLIDAY FT-3 COX',
 '4938': 'HOLAN RD FT-6 DAKSHINKAN',
 '4939': 'DUMNI BR BOOTH ATM-1',
+'5008': 'SEC-14 UTR FT CRM-1',
 '5009': 'GORIB E NEWAZ FT CRM-1',
 '5020': 'MOLLARTAK FT CRM-1',
 '5021': 'NIKUNJA-2 FT CRM-1',
@@ -1668,6 +1673,7 @@ function closeCallModal() {
 '5398': 'BUS STND FT CRM-1 HEMAYET',
 '5399': 'TONGI BZR FT CRM-1 GAZIPR',
 '5400': 'ATIPARA FT CRM-1',
+'5401': 'NAMAPARA FT CRM-1',
 '5402': 'COLLEGE RD FT CRM-1 KAPA',
 '5403': 'MONIPUR BZR FT CRM-1 GAZI',
 '5407': 'TEKNAF FT CRM-1 COXSBAZAR',
@@ -1691,7 +1697,6 @@ function closeCallModal() {
 '5487': 'SEED STORE FT CRM-1 VALU',
 '5513': 'KALIGANJ BZ FT CRM-1 GAZ',
 '5514': 'MIRER BAZAR FT CRM-1 GAZ',
-'5526': 'B GOLA FT CRM-1 BOG',
 '5529': 'LATIFPR FT CRM-1 BOG',
 '5530': 'BAGURA SADAR FT CRM-1',
 '5531': 'RAHMTGJ FT CRM-1 SIR',
@@ -1748,6 +1753,7 @@ function closeCallModal() {
 '5755': 'KALIAKOIR FT CRM-1',
 '5768': 'JKKNU FT CRM-1 MYMENSINGH',
 '5769': 'ARIF KNIT SPIN CRM-1 VALU',
+'5770': 'FULPUR FT CRM-1 MYM',
 '5796': 'FULBARIA FT CRM- 1 MYM',
 '5798': 'NANDIGRAM FT CRM-1 BOG',
 '5799': 'DHUNAT FT CRM-1 BOG',
@@ -1846,6 +1852,7 @@ function closeCallModal() {
 '6151': 'NICHE STICH FT CRM-1 GAZI',
 '6153': 'SHIMULTALI FT CRM-1 GAZ',
 '6154': 'MONTRIBARI RD FT CRM1 GAZ',
+'6155': 'EVER SMART CRM-1 GAZ',
 '6156': 'EPYLLION KNITEX FT CRM-1',
 '6157': 'DATTAPARA FT CRM-1 TONGI',
 '6158': 'MEMBER BARI FT CRM-1 GAZI',
@@ -1979,7 +1986,6 @@ function closeCallModal() {
 '6856': 'KURIL FT CRM-2',
 '6858': 'ABDULLAHPR FT CRM-2 UTTR',
 '6869': 'BAGURA SADAR FT CRM-2',
-'6870': 'B GOLA FT CRM-2 BOG',
 '6886': 'THANA RD FT CRM-2 FRD',
 '6895': 'CEPZ CRCLE FT CRM-2 CTG',
 '6927': 'RAZZAK PLZA FT CRM-2 ASHU',
@@ -2001,12 +2007,14 @@ function closeCallModal() {
 '7011': 'UTTARA ADHUNIK MC CRM-1',
 '7017': 'AMAN GRP BTH CRM-1 UTTR',
 '7018': 'CHAITY GRP BTH CRM-1 UTTR',
+'7031': 'NAMAPARA FT CRM-2',
 '7065': 'GORIB E NEWAZ FT CRM-2',
 '7066': 'KAMARPARA BR FT CRM-2',
 '7067': 'MOLLARTAK FT CRM-2',
 '7068': 'RABINDRA SARONI FT CRM-2',
 '7120': 'LOHAGORA FT CRM-2 CTG',
 '7137': 'MADANI AVE FT CRM-2 VATRA',
+'7138': 'SEC-14 UTR FT CRM-2',
 '7140': 'NIKUNJA R13 FT CRM-2',
 '7141': 'DEPZ BTH CRM-1 SAVAR',
 '7142': 'DEPZ BTH CRM-2 SAVAR',
@@ -2109,6 +2117,7 @@ function closeCallModal() {
 '7599': 'COURT BZR FT CRM-2 UKHIYA',
 '7600': 'PATIYA FT CRM-2 CTG',
 '7613': 'MOKAMTOLA FT CRM-2 BOGURA',
+'7621': 'FULPUR FT CRM-2 MYM',
 '7622': 'SHOMBHUGANJ FT CRM-2 MYM',
 '7623': 'BUS STOP VALUKA FT CRM-2',
 '7624': 'FULBARIA FT CRM- 2 MYM',
@@ -2249,6 +2258,7 @@ function closeCallModal() {
 '7997': 'AMC KNIT COMPOSIT FT CRM2',
 '7998': 'MONTRIBARI RD FT CRM2 GAZ',
 '7999': 'SM KNT COMP FT CRM-2 GAZ',
+'8000': 'EVER SMART CRM-2 GAZ',
 '8001': 'UNILLIANCE TX BTH CRM-1',
 '8002': 'UNILLIANCE TX BTH CRM-2',
 '8007': 'BONDOR TILA FT CRM-2 CTG',
@@ -2407,12 +2417,14 @@ function closeCallModal() {
 '8467': 'CITY PORT FT CRM-3',
 '8468': 'ABDULLAHPR FT CRM-3 UTTR',
 '8469': 'RABINDRA SARONI FT CRM-3',
+'8470': 'SEC-14 UTR FT CRM-3',
 '8471': 'KAMARPARA BR FT CRM-3',
 '8477': 'DIU FT CRM-3 ASHULIA',
 '8487': 'KURIL FT CRM-3',
 '8496': 'MADANI AVE FT CRM-3 VATRA',
 '8507': 'GAUSAL AZAM AV FT CRM-3',
 '8530': 'TONGI BZR FT CRM-3 GAZIPR',
+'8531': 'NAMAPARA FT CRM-3',
 '8537': 'HOSSAIN MKT FT CRM-3',
 '8539': 'SAVAR NEWMKT CRM-5',
 '8541': 'BUS STND FT CRM-3 HEMAYET',
@@ -2441,12 +2453,12 @@ function closeCallModal() {
 '8682': 'DALAUTPR FT CRM-2 KUS',
 '8690': 'SHERPUR FT CRM-3 BOGURA',
 '8691': 'BAGURA SADAR FT CRM-3',
-'8692': 'B GOLA FT CRM-3 BOG',
 '8693': 'CIRCULAR R FT CRM-3 GAI',
 '8694': 'PURATON BZR FT CRM-3 GAI',
 '8695': 'THANA ROAD FT CRM-3 PABNA',
 '8696': 'SHAHJADPUR FT CRM-3 SIR',
 '8697': 'ULLAPARA- CRM-3 SIRJ',
+'8712': 'FULPUR FT CRM-3 MYM',
 '8713': 'CHARPARA FT CRM-3 MYM',
 '8714': 'TRISHAL FT CRM-3 MYM',
 '8715': 'BAGHMARA R FT CRM-3 MYM',
@@ -2498,6 +2510,7 @@ function closeCallModal() {
 '9068': 'SHAFIPR BZR FT CRM-4 GAZI',
 '9072': 'BANK TOWN FT CRM-3 SAVAR',
 '9073': 'BANK TOWN FT CRM-4 SAVAR',
+'9074': 'NAMAPARA FT CRM-4',
 '9077': 'BARUA FT CRM-3 KHILKHET',
 '9078': 'BARUA FT CRM-4 KHILKHET',
 '9081': 'M RAJASHAN FT CRM-3 SAV',
@@ -2561,250 +2574,136 @@ function closeCallModal() {
 '9241': 'KALAMPUR BR FT CRM-1',
 '9242': 'SHATANI FT CRM-1 BOG',
 '9243': 'SHATANI FT CRM-2 BOG',
-'9251': 'CEPZ FT CRM-1 CTG',
-'9252': 'CEPZ FT CRM-2 CTG',
-'9253': 'CEPZ FT CRM-3 CTG',
-'9254': 'CEPZ FT CRM-4 CTG',
 '9255': 'RAJBARI SD FT CRM-3',
 '9256': 'SREEPUR FT CRM-1 RAJBARI',
 '9257': 'SREEPUR FT CRM-2 RAJBARI',
 '9268': 'UTTARA ADHUNIK MC CRM-2',
-'9290': 'AMCGH FT CRM-3 UTTR',
-'9291': 'GMS TEXTILE FT CRM-1 GAZI',
-'9292': 'AMCGH FT CRM-4 UTTR',
-'9293': 'GMS TEXTILE FT CRM-2 GAZI',
-'9295': 'GMS TEXTILE FT CRM-3 GAZI',
-            // Add more ATM/CRM ID to Location mappings as needed
-        };
+'9228': 'ZAMGORA FT CRM-2',
+'9241': 'KALAMPUR BR FT CRM-1',
+'9242': 'SHATANI FT CRM-1 BOG',
+'9243': 'SHATANI FT CRM-2 BOG',
+'9255': 'RAJBARI SD FT CRM-3',
+'9256': 'SREEPUR FT CRM-1 RAJBARI',
+'9257': 'SREEPUR FT CRM-2 RAJBARI',
+'9268': 'UTTARA ADHUNIK MC CRM-2',
+'9298': 'DEWALIA BARI FT CRM1 GAZI',
+'9299': 'DEWALIA BARI FT CRM2 GAZI',
+'9300': 'DEWALIA BARI FT CRM3 GAZI',
+'9301': 'MEGHNA KNIT FT CRM-1 GAZI',
+'9302': 'MEGHNA KNIT FT CRM-2 GAZI',
+    };
 
-        // Automatically set the current date
-        window.onload = function() {
-            const today = new Date();
-            const bangladeshTimeOffset = 6 * 60 * 60 * 1000;  // বাংলাদেশ UTC+6
-            const localDate = new Date(today.getTime() + bangladeshTimeOffset);
-            const formattedDate = localDate.toISOString().split('T')[0];
-            const dateField = document.getElementById("Date");
-            dateField.value = formattedDate;
-            dateField.readOnly = true;  // ডেট ফিল্ড রিড-অনলি করা হয়েছে
-        };
+document.getElementById('EmployeeID').addEventListener('input', function () {
+    const employeeId = this.value.trim();
+    const employee = employeeData[employeeId];
 
-        // ফাংশন Employee ID এর ভিত্তিতে Executive Name এবং Zone আপডেট করার জন্য
-        function updateExecutiveNameAndZone() {
-            const jobId = document.getElementById('JobID').value.trim();
-            const executiveName = jobIdToName[jobId] || '';
-            const zone = jobIdToZone[jobId] || '';
+    document.getElementById('ExecutiveName').value = employee ? employee.name : '';
+    document.getElementById('Zone').value = employee ? employee.zone : '';
+    document.getElementById('MobileNumber').value = employee ? employee.mobile : '';
+});
 
-            if (executiveName === '' || zone === '') {
-                document.getElementById('EmployeeIDError').textContent = "এখানে Employee ID এন্ট্রি দেওয়ার সময় সামনের 0 বাদ দিয়ে দিতে হবে। উদাহরনঃ যদি Employee ID 01046 হয় তবে 1046 এন্ট্রি দিতে হবে।.";
-            } else {
-                document.getElementById('EmployeeIDError').textContent = "";
-            }
+document.getElementById('ATMCRMID').addEventListener('input', function () {
+    const atmId = this.value.trim();
+    document.getElementById('ATMLOCATION').value = atmData[atmId] || '';
+});
 
-            document.getElementById('ExecutiveName').value = executiveName;
-            document.getElementById('Zone').value = zone;
+document.getElementById('dataEntryForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // ফর্ম সাবমিশন আটকানো হয়েছে
+
+    // ফর্ম ভ্যালিডেশন
+    if (!validateForm()) {
+        alert('সব ফিল্ড সঠিকভাবে পূরণ করুন।');
+        return;
+    }
+
+    // "How many people's bills?" থেকে ডাটা এনে Remarks ফিল্ড পূরণ
+    const howManyPeople = document.getElementById('Person').value.trim();  // 'howManyPeople' পরিবর্তন করে 'Person'
+    const remarksField = document.getElementById('Remarks');
+    remarksField.value = howManyPeople 
+        ? `${howManyPeople} people's bills recorded.` 
+        : ''; // যদি ইনপুট খালি থাকে
+
+    // Geolocation সহ ফর্ম সাবমিশন
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const locationString = `Lat: ${latitude}, Long: ${longitude}`;
+            remarksField.value += `\nLocation: ${locationString}`;  // নতুন লাইনে location অ্যাড করা
+            submitForm();
+        }, function (error) {
+            console.error("Error getting location: ", error);
+            document.getElementById('formError').textContent = error.message || "Unable to retrieve location.";  // ত্রুটি বার্তা উন্নত
+            submitForm();
+        });
+    } else {
+        console.error("Geolocation not supported by this browser.");
+        document.getElementById('formError').textContent = "Geolocation not supported by your browser.";  // জিওলোকেশন না থাকলে ত্রুটি বার্তা
+        submitForm();
+    }
+});
+
+// ভ্যালিডেশন ফাংশন
+function validateForm() {
+    const requiredFields = ['EmployeeID', 'ATMCRMID', 'ATMOpenTime', 'ATMCloseTime', 'From', 'To', 'Transport', 'TravellingAmount', 'Person'];
+    let isValid = true;
+
+    requiredFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (!field.value.trim()) {
+            isValid = false;
+            field.style.border = '2px solid red'; // খালি থাকলে লাল বর্ডার দেখাবে
+        } else {
+            field.style.border = ''; // পূরণ হলে বর্ডার মুছে যাবে
         }
+    });
 
-        // ফাংশন ATM/CRM ID এর ভিত্তিতে ATM Location আপডেট করার জন্য
-        function updateATMLocation() {
-            const atmId = document.getElementById('ATMCRMID').value.trim();
-            const atmLocation = atmIdToLocation[atmId] || '';
-            document.getElementById('ATMLOCATION').value = atmLocation;
+    return isValid;
+}
 
-            if (atmLocation === '') {
-                document.getElementById('ATMCRMIDError').textContent = "আপনি যদি DBBL আইডি লেখেন তবে শুধুমাত্র আইডি লিখুন। উদাহরণ: 4444. অথবা যদি আপনি IBBL আইডি লিখলে IBBL+ID, CBBL আইডি লিখলে CBBL+ID, ASIA  আইডি লিখলে ASIA+ID, SCB আইডি লিখলে SCB+ID এই ভাবে এন্ট্রি দিতে হবে।.";
-            } else {
-                document.getElementById('ATMCRMIDError').textContent = "";
-            }
+// সাবমিশন ফাংশন
+function submitForm() {
+    const formData = new FormData(document.getElementById('dataEntryForm'));
+    const jsonData = Object.fromEntries(formData.entries());
+
+    fetch('https://script.google.com/macros/s/AKfycbw-FHxmn2h3EqnCRXJWY88I6jMEUGWQ3bReqVdxaX_q5d_XXi13Xwe_v6T-IJRk3EXm0Q/exec', {
+        method: 'POST',
+        body: new URLSearchParams(jsonData)
+    }).then(response => {
+        if (response.ok) {
+            // ধন্যবাদ পপআপ দেখান
+            const thankYouPopup = document.getElementById('thankYouPopup');
+            thankYouPopup.style.display = 'block';
+            
+            // ফর্ম রিসেট
+            document.getElementById('dataEntryForm').reset();
+            const fields = document.querySelectorAll('input, select, textarea');
+            fields.forEach(field => field.style.border = '');
+
+            // ১ সেকেন্ড পর রিডিরেক্ট
+            setTimeout(() => {
+                thankYouPopup.style.display = 'none';
+                window.location.href = 'index.html';
+            }, 5000);
+        } else {
+            alert('Thank you for your valuable time');
         }
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('Thank you for your valuable time.');
+    });
+}
 
-        // ফর্ম সাবমিশন হ্যান্ডল করার ফাংশন
-        function handleSubmit(event) {
-            event.preventDefault();
+// ডেট ফিল্ডে বর্তমান তারিখ সেট করুন
+const today = new Date();
+const formattedDate = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
+document.getElementById('Date').value = formattedDate; // 'Date' ফিল্ডে নতুন ফরম্যাটে তারিখ
 
-            // ফর্মের কোনো এ্যারর আছে কি না চেক করা
-            const employeeError = document.getElementById('EmployeeIDError').textContent;
-            const atmError = document.getElementById('ATMCRMIDError').textContent;
-
-            if (employeeError !== "" || atmError !== "") {
-                document.getElementById('formError').textContent = "Please fix the errors above before submitting.";
-                return;
-            } else {
-                document.getElementById('formError').textContent = "";
-            }
-
-            const inTime = document.getElementById('InTime').value;
-            const outTime = document.getElementById('OutTime').value;
-            const remarksField = document.getElementById('Remarks');
-            const personField = document.getElementById('Person').value;
-
-            // Remarks এ ইন টাইম এবং আউট টাইম যোগ করা
-            remarksField.value += `\nIn Time: ${inTime}, Out Time: ${outTime}`;
-
-            // নির্বাচিত সংখ্যার ভিত্তিতে বিল তথ্য যোগ করা
-            if (personField === '1 Person') {
-                remarksField.value += `\nBill for 1 Person`;
-            } else if (personField === '2 Person') {
-                remarksField.value += `\nBill for 2 Persons`;
-            }
-
-            // জিওলোকেশন গ্রহণের চেষ্টা করা
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    const locationString = `Lat: ${latitude}, Long: ${longitude}`;
-                    remarksField.value += `\nLocation: ${locationString}`;
-                    submitForm(event);
-                }, function(error) {
-                    console.error("Error getting location: ", error);
-                    document.getElementById('formError').textContent = "Unable to retrieve location.";
-                    submitForm(event);
-                });
-            } else {
-                console.error("Geolocation not supported by this browser.");
-                document.getElementById('formError').textContent = "Geolocation not supported by your browser.";
-                submitForm(event);
-            }
-        }
-
-        // ফর্ম সাবমিট করার পর ধন্যবাদ বার্তা দেখানো
-        function submitForm(event) {
-            // ধন্যবাদ বার্তা দেখানো
-            document.getElementById('thankYouMessage').style.display = 'block';
-            document.getElementById('myForm').style.display = 'none';
-
-            const formData = new FormData(event.target);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
-
-            fetch('https://script.google.com/macros/s/AKfycby8G8qwhM3s0D4Ws0eTs1AHpSgDWVYy3BG5W5mB_aVC2UiU1ZJGhkp0AigssIDUBlpc-w/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams(data)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Server error: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(result => {
-                console.log('Success:', result);
-                document.getElementById('formSuccess').textContent = "Form submitted successfully!";
-                setTimeout(function() {
-                    window.location.href = 'https://mpllflm.vercel.app/';
-                }, 2000);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('formError').textContent = "An error occurred while submitting the form. Please try again.";
-                // আবার ফর্ম দেখানো
-                document.getElementById('myForm').style.display = 'block';
-                document.getElementById('thankYouMessage').style.display = 'none';
-            });
-        }
-
-        // শর্টেজ অপশন দেখানোর জন্য মডাল খুলতে
-        function showShortageOptions() {
-            document.getElementById('shortageModal').style.display = 'block';
-        }
-
-        // নির্দিষ্ট জোনের জন্য পাসওয়ার্ড প্রম্পট এবং লিঙ্ক ওপেন করার ফাংশন
-        function promptPassword(zone) {
-            const password = prompt("Please enter the password:");
-
-            if (zone === 'Dhaka-1' && password === 'admin') {
-                window.open('https://drv.ms/x/c/d47e761307970fab/EasPlwcTdn4ggNSiAAAAAAAB0A_oHB0xq_bNj2RlnNkSkw?e=oTnbek', '_blank');
-            } else if (zone === 'Dhaka-2' && password === 'admin') {
-                window.open('https://drv.ms/x/c/d47e761307970fab/EasPlwcTdn4ggNS0AAAAAAAB3HqwPm-lPHsrf-vVQqQ0vQ?e=p0fv99', '_blank');
-            } else {
-                alert("contact authorised person .");
-            }
-        }
-
-        // মডাল ক্লোজ করার ফাংশন
-        function closeModal() {
-            document.getElementById('shortageModal').style.display = 'none';
-        }
-    </script>
-<div class="popup-text" id="popupMessage">
-  <ul>
-    <li><a href="#" target="_self">
-      আসসালামু আলাইকুম। প্রিয় কাস্টোডিয়ান, আপনার প্রতিটি কল পাবার ২ ঘন্টার মধ্যে কাজ করে অফিসে 01976755754 এই নাম্বারে আপডেট দেবার জন্য বিশেষ ভাবে অনুরোধ জানানো যাচ্ছে। তা না হলে সেই কলের AMCPV (যেই টাকা ডাচ বাংলা ব্যাংক কেঁটে নেয়) তার দায়ভার আপনাকে বহন করতে হবে। ধন্যবাদ।
-    </a></li>
-  </ul>
+</script>
+<div id="thankYouPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #f6d365, #fda085); padding: 20px 30px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); text-align: center; border-radius: 15px; color: white; font-family: 'Arial', sans-serif;">
+    <h2 style="margin: 0; font-size: 28px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); color: #ffffff;">🎉 Thank You!</h2>
+    <p style="margin: 10px 0 0; font-size: 18px; color: #ffffff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">Your submission was successful!</p>
 </div>
 
-<style>
-  .popup-text {
-    position: fixed;
-    top: 10px; /* Distance from the top */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    width: 90%; /* Adjust width for mobile */
-    padding: 10px 15px; /* Smaller padding for mobile */
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    text-align: center;
-    font-size: 16px; /* Adjust font size for mobile */
-    font-weight: bold;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow for popup effect */
-    opacity: 0; /* Initially invisible */
-    z-index: 1000; /* Keep it on top of other content */
-    animation: popup-animation 10s ease-in-out infinite; /* Popup effect with zoom */
-  }
-
-  .popup-text a {
-    color: #FFFF00; /* Yellow text color */
-    text-decoration: none; /* Removes underline from links */
-  }
-
-  .popup-text ul:hover {
-    animation-play-state: paused; /* Pause on hover */
-  }
-
-  @keyframes popup-animation {
-    0% {
-      transform: translateX(-50%) scale(0.5); /* Small and hidden */
-      opacity: 0; /* Transparent */
-    }
-    10% {
-      transform: translateX(-50%) scale(1); /* Zoom to full size */
-      opacity: 1; /* Fully visible */
-    }
-    80% {
-      transform: translateX(-50%) scale(1); /* Stay full size for some time */
-      opacity: 1; /* Fully visible */
-    }
-    100% {
-      transform: translateX(-50%) scale(0.5); /* Shrink and disappear */
-      opacity: 0; /* Transparent */
-    }
-  }
-
-  /* Media query for mobile screens */
-  @media screen and (max-width: 600px) {
-    .popup-text {
-      font-size: 14px; /* Smaller font for mobile */
-      width: 95%; /* Wider popup for mobile */
-      padding: 8px 12px; /* Adjust padding */
-    }
-  }
-</style>
-
-<script>
-  // JavaScript to play the sound when the popup appears
-  document.addEventListener("DOMContentLoaded", function() {
-    const popupMessage = document.getElementById("popupMessage");
-    const popupSound = document.getElementById("popupSound");
-
-    // Function to play sound at the start of the animation
-    popupMessage.addEventListener("animationstart", function() {
-      popupSound.play();
-    });
-  });
-</script>
 </body>
 </html>
